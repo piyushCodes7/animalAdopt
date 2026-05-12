@@ -4,514 +4,377 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PawsHome — Animal Adoption</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#home" class="nav-logo">
-        <span class="logo-paw">🐾</span>
-        <span class="logo-text">PawsHome</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#adopt" class="nav-link">Adopt Pets</a></li>
-        <li><a href="#stories" class="nav-link">Success Stories</a></li>
-        <li><a href="#volunteer" class="nav-link">Volunteer</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<div class="grain"></div>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
-    <div class="hero-container">
-      <div class="hero-text">
-        <span class="hero-eyebrow reveal">Adoption Changes Everything</span>
-        <h1 class="hero-headline reveal">
-          Give Them a Home,<br />
-          <em>Not Just Shelter.</em>
-        </h1>
-        <p class="hero-sub reveal">
-          Every animal deserves a place to belong. Not a cage, not a kennel —
-          a family, a couch, a Sunday morning. Find your perfect companion today.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#adopt" class="btn btn-primary">Adopt Now</a>
-          <a href="#volunteer" class="btn btn-ghost">Become a Volunteer</a>
-        </div>
-        <div class="hero-stats reveal">
-          <div class="stat">
-            <span class="stat-num">4,200+</span>
-            <span class="stat-label">Animals Rescued</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">3,800+</span>
-            <span class="stat-label">Homes Found</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">120+</span>
-            <span class="stat-label">Volunteers</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual reveal">
-        <div class="hero-card-main">
-          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="Happy dog" class="hero-img-main" />
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            Available Now
-          </div>
-        </div>
-        <div class="hero-card-float float-1">
-          <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=200&q=80" alt="Cat" />
-          <span>Luna</span>
-        </div>
-        <div class="hero-card-float float-2">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80" alt="Rabbit" />
-          <span>Biscuit</span>
-        </div>
-        <div class="hero-paw-tag">
-          <span>🐾 130 pets waiting</span>
-        </div>
+<header class="navbar">
+  <div class="container nav-wrapper">
+    <div class="logo">🐾 PawsHome</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#adopt">Adopt Pets</a>
+      <a href="#stories">Success Stories</a>
+      <a href="#volunteer">Volunteer</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <span class="tag">Animal Rescue Center</span>
+      <h1>Give Them a Home,<br>Not Just Shelter.</h1>
+      <p>
+        Every rescued animal deserves warmth, care, and a family.
+        Help us connect loving pets with loving humans.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#adopt" class="primary-btn">Adopt Now</a>
+        <a href="#volunteer" class="secondary-btn">Become Volunteer</a>
       </div>
     </div>
-    <div class="hero-scroll-cue">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+
+    <div class="hero-image reveal-delay">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&q=80">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ADOPT PETS SECTION -->
-  <section class="adopt-section" id="adopt">
-    <div class="section-container">
-      <div class="section-header reveal">
-        <span class="section-tag">Find Your Match</span>
-        <h2 class="section-title">Pets Waiting for You</h2>
-        <p class="section-desc">Each one is unique. Each one is ready to love you unconditionally.</p>
-      </div>
-
-      <div class="filter-row reveal">
-        <button class="filter-btn active" data-filter="all">All Pets</button>
-        <button class="filter-btn" data-filter="dog">🐶 Dogs</button>
-        <button class="filter-btn" data-filter="cat">🐱 Cats</button>
-        <button class="filter-btn" data-filter="rabbit">🐰 Rabbits</button>
-      </div>
-
-      <div class="pets-grid" id="petsGrid">
-
-        <div class="pet-card reveal" data-type="dog">
-          <div class="pet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&q=80" alt="Max" />
-            <span class="pet-type-badge">Dog</span>
-          </div>
-          <div class="pet-info">
-            <div class="pet-meta">
-              <h3>Max</h3>
-              <span class="pet-age">3 yrs</span>
-            </div>
-            <p class="pet-breed">Golden Retriever</p>
-            <p class="pet-desc">Playful, loves fetch and cuddle sessions. Great with kids and other pets.</p>
-            <button class="btn-adopt" onclick="openAdoptModal('Max')">Adopt Max →</button>
-          </div>
-        </div>
-
-        <div class="pet-card reveal" data-type="cat">
-          <div class="pet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=400&q=80" alt="Luna" />
-            <span class="pet-type-badge">Cat</span>
-          </div>
-          <div class="pet-info">
-            <div class="pet-meta">
-              <h3>Luna</h3>
-              <span class="pet-age">2 yrs</span>
-            </div>
-            <p class="pet-breed">Siamese Mix</p>
-            <p class="pet-desc">Curious, affectionate, and endlessly entertaining. She'll find her favourite spot on your lap.</p>
-            <button class="btn-adopt" onclick="openAdoptModal('Luna')">Adopt Luna →</button>
-          </div>
-        </div>
-
-        <div class="pet-card reveal" data-type="rabbit">
-          <div class="pet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=400&q=80" alt="Biscuit" />
-            <span class="pet-type-badge">Rabbit</span>
-          </div>
-          <div class="pet-info">
-            <div class="pet-meta">
-              <h3>Biscuit</h3>
-              <span class="pet-age">1 yr</span>
-            </div>
-            <p class="pet-breed">Flemish Giant</p>
-            <p class="pet-desc">Gentle giant with a calm temperament. Perfect first pet. Loves fresh herbs.</p>
-            <button class="btn-adopt" onclick="openAdoptModal('Biscuit')">Adopt Biscuit →</button>
-          </div>
-        </div>
-
-        <div class="pet-card reveal" data-type="dog">
-          <div class="pet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&q=80" alt="Bella" />
-            <span class="pet-type-badge">Dog</span>
-          </div>
-          <div class="pet-info">
-            <div class="pet-meta">
-              <h3>Bella</h3>
-              <span class="pet-age">5 yrs</span>
-            </div>
-            <p class="pet-breed">Beagle</p>
-            <p class="pet-desc">A sniffer and a sweetheart. Calm at home, adventurous outdoors. Loves morning walks.</p>
-            <button class="btn-adopt" onclick="openAdoptModal('Bella')">Adopt Bella →</button>
-          </div>
-        </div>
-
-        <div class="pet-card reveal" data-type="cat">
-          <div class="pet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?w=400&q=80" alt="Mochi" />
-            <span class="pet-type-badge">Cat</span>
-          </div>
-          <div class="pet-info">
-            <div class="pet-meta">
-              <h3>Mochi</h3>
-              <span class="pet-age">4 yrs</span>
-            </div>
-            <p class="pet-breed">Scottish Fold</p>
-            <p class="pet-desc">Reserved at first but deeply loyal. Loves windows, sunbeams, and quiet evenings.</p>
-            <button class="btn-adopt" onclick="openAdoptModal('Mochi')">Adopt Mochi →</button>
-          </div>
-        </div>
-
-        <div class="pet-card reveal" data-type="rabbit">
-          <div class="pet-img-wrap">
-            <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=400&q=80" alt="Clover" />
-            <span class="pet-type-badge">Rabbit</span>
-          </div>
-          <div class="pet-info">
-            <div class="pet-meta">
-              <h3>Clover</h3>
-              <span class="pet-age">8 mo</span>
-            </div>
-            <p class="pet-breed">Holland Lop</p>
-            <p class="pet-desc">Bouncy, social, and full of character. Gets along brilliantly with children.</p>
-            <button class="btn-adopt" onclick="openAdoptModal('Clover')">Adopt Clover →</button>
-          </div>
-        </div>
-
-      </div>
+<section class="pets-section" id="adopt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">Adopt Pets</span>
+      <h2>Meet Your Future Best Friend</h2>
     </div>
-  </section>
 
-  <!-- SUCCESS STORIES SECTION -->
-  <section class="stories-section" id="stories">
-    <div class="stories-bg-accent"></div>
-    <div class="section-container">
-      <div class="section-header reveal">
-        <span class="section-tag">Real Stories</span>
-        <h2 class="section-title">They Found Their People</h2>
-        <p class="section-desc">Behind every adopted pet is a story worth telling. Here are just a few.</p>
-      </div>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All Pets</button>
+      <button class="filter-btn" data-filter="dog">Dogs</button>
+      <button class="filter-btn" data-filter="cat">Cats</button>
+      <button class="filter-btn" data-filter="rabbit">Rabbits</button>
+    </div>
 
-      <div class="stories-slider" id="storiesSlider">
-        <div class="story-track" id="storyTrack">
+    <div class="pets-grid">
 
-          <div class="story-card">
-            <div class="story-imgs">
-              <div class="story-img-wrap before-img">
-                <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=300&q=80" alt="Before" />
-                <span class="img-label">Before</span>
-              </div>
-              <div class="story-img-wrap after-img">
-                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300&q=80" alt="After" />
-                <span class="img-label">After</span>
-              </div>
-            </div>
-            <div class="story-body">
-              <p class="story-quote">"We picked up Charlie from PawsHome on a whim. Three months later I can't imagine the house without him. He's not our pet — he's our family."</p>
-              <div class="story-author">
-                <div class="author-avatar">RS</div>
-                <div>
-                  <strong>Riya Sharma</strong>
-                  <span>Adopted Charlie, the Labrador</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-imgs">
-              <div class="story-img-wrap before-img">
-                <img src="https://images.unsplash.com/photo-1596854407944-bf87f6fdd49e?w=300&q=80" alt="Before" />
-                <span class="img-label">Before</span>
-              </div>
-              <div class="story-img-wrap after-img">
-                <img src="https://images.unsplash.com/photo-1495360010541-f48722b82f25?w=300&q=80" alt="After" />
-                <span class="img-label">After</span>
-              </div>
-            </div>
-            <div class="story-body">
-              <p class="story-quote">"Zara was found injured by the roadside. Today she curls up on my pillow every night. The transformation is unbelievable — for both of us."</p>
-              <div class="story-author">
-                <div class="author-avatar">AM</div>
-                <div>
-                  <strong>Arjun Mehta</strong>
-                  <span>Adopted Zara, the Persian Cat</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="story-imgs">
-              <div class="story-img-wrap before-img">
-                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=300&q=80" alt="Before" />
-                <span class="img-label">Before</span>
-              </div>
-              <div class="story-img-wrap after-img">
-                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&q=80" alt="After" />
-                <span class="img-label">After</span>
-              </div>
-            </div>
-            <div class="story-body">
-              <p class="story-quote">"My daughter was going through a tough time. Bruno helped her open up again. He gave her a reason to get up, go outside, and smile. Adoption saved two lives."</p>
-              <div class="story-author">
-                <div class="author-avatar">PK</div>
-                <div>
-                  <strong>Priya Kapoor</strong>
-                  <span>Adopted Bruno, the Golden Mix</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
+      <div class="pet-card reveal" data-type="dog">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=600&q=80">
+        <div class="pet-content">
+          <h3>Max</h3>
+          <p>Golden Retriever • 3 Years</p>
+          <span>Playful, loyal and loves long walks.</span>
+          <button class="adopt-btn">Adopt Max</button>
         </div>
       </div>
 
-      <div class="slider-controls">
-        <button class="slider-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
-        <div class="slider-dots" id="sliderDots"></div>
-        <button class="slider-btn" id="nextBtn" aria-label="Next">&#8594;</button>
+      <div class="pet-card reveal" data-type="cat">
+        <img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=600&q=80">
+        <div class="pet-content">
+          <h3>Luna</h3>
+          <p>Siamese Mix • 2 Years</p>
+          <span>Affectionate and calm indoor companion.</span>
+          <button class="adopt-btn">Adopt Luna</button>
+        </div>
+      </div>
+
+      <div class="pet-card reveal" data-type="rabbit">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&q=80">
+        <div class="pet-content">
+          <h3>Biscuit</h3>
+          <p>Holland Lop • 1 Year</p>
+          <span>Gentle and incredibly friendly.</span>
+          <button class="adopt-btn">Adopt Biscuit</button>
+        </div>
+      </div>
+
+      <div class="pet-card reveal" data-type="dog">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80">
+        <div class="pet-content">
+          <h3>Buddy</h3>
+          <p>Labrador • 4 Years</p>
+          <span>Great with kids and other pets.</span>
+          <button class="adopt-btn">Adopt Buddy</button>
+        </div>
+      </div>
+
+      <div class="pet-card reveal" data-type="cat">
+        <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=600&q=80">
+        <div class="pet-content">
+          <h3>Oliver</h3>
+          <p>Tabby • 1 Year</p>
+          <span>Curious, energetic and loves to play.</span>
+          <button class="adopt-btn">Adopt Oliver</button>
+        </div>
+      </div>
+
+      <div class="pet-card reveal" data-type="dog">
+        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80">
+        <div class="pet-content">
+          <h3>Charlie</h3>
+          <p>Beagle • 2 Years</p>
+          <span>Adventurous scent hound with a gentle heart.</span>
+          <button class="adopt-btn">Adopt Charlie</button>
+        </div>
+      </div>
+
+      <div class="pet-card reveal" data-type="cat">
+        <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=600&q=80">
+        <div class="pet-content">
+          <h3>Milo</h3>
+          <p>Orange Tabby • 3 Years</p>
+          <span>Charming lap cat who loves cuddles.</span>
+          <button class="adopt-btn">Adopt Milo</button>
+        </div>
+      </div>
+
+      <div class="pet-card reveal" data-type="rabbit">
+        <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&q=80">
+        <div class="pet-content">
+          <h3>Thumper</h3>
+          <p>Dutch Rabbit • 2 Years</p>
+          <span>Smart, active and loves to explore.</span>
+          <button class="adopt-btn">Adopt Thumper</button>
+        </div>
+      </div>
+
+      <div class="pet-card reveal" data-type="dog">
+        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=600&q=80">
+        <div class="pet-content">
+          <h3>Daisy</h3>
+          <p>Border Collie • 2 Years</p>
+          <span>Intelligent, athletic and eager to learn.</span>
+          <button class="adopt-btn">Adopt Daisy</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="stories-section" id="stories">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">Success Stories</span>
+      <h2>Happy Tails Forever</h2>
+    </div>
+
+    <div class="stories-grid">
+      <div class="story-card reveal">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80">
+        <div class="story-content">
+          <h3>Sarah & Max</h3>
+          <p>"Max brought so much joy into our lives. He's the perfect companion for our morning runs and evening cuddles."</p>
+          <span class="story-date">Adopted 2024</span>
+        </div>
+      </div>
+
+      <div class="story-card reveal">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80">
+        <div class="story-content">
+          <h3>The Johnson Family & Luna</h3>
+          <p>"Luna has become the heart of our family. The kids adore her, and she's gentle with everyone."</p>
+          <span class="story-date">Adopted 2024</span>
+        </div>
+      </div>
+
+      <div class="story-card reveal">
+        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80">
+        <div class="story-content">
+          <h3>Mike & Buddy</h3>
+          <p>"After years of wanting a dog, adopting Buddy was the best decision. He's my adventure buddy now."</p>
+          <span class="story-date">Adopted 2023</span>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- VOLUNTEER SECTION -->
-  <section class="volunteer-section" id="volunteer">
-    <div class="section-container vol-layout">
-      <div class="vol-left reveal">
-        <div class="vol-img-stack">
-          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80" alt="Volunteer with dog" class="vol-img-main" />
-          <div class="vol-img-overlay">
-            <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=220&q=80" alt="Volunteer" />
+<section class="volunteer-section" id="volunteer">
+  <div class="container">
+    <div class="volunteer-grid">
+      <div class="volunteer-text reveal">
+        <span class="tag">Volunteer</span>
+        <h2>Make a Difference Today</h2>
+        <p>Join our community of dedicated volunteers who help care for, socialize, and find homes for animals in need. Your time and love can change a life.</p>
+        
+        <div class="volunteer-benefits">
+          <div class="benefit-item">
+            <span class="benefit-icon">🤝</span>
+            <span>Help animals in need</span>
           </div>
-          <div class="vol-floating-fact">
-            <span class="fact-icon">💛</span>
-            <div>
-              <strong>120+</strong>
-              <span>Active volunteers</span>
-            </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">❤️</span>
+            <span>Meet like-minded people</span>
+          </div>
+          <div class="benefit-item">
+            <span class="benefit-icon">🌟</span>
+            <span>Gain valuable experience</span>
           </div>
         </div>
       </div>
 
-      <div class="vol-right reveal">
-        <span class="section-tag">Join the Team</span>
-        <h2 class="vol-title">Make a Real Difference</h2>
-        <p class="vol-desc">
-          Our volunteers are the heartbeat of PawsHome. Whether you can spare a weekend or a few hours a week — every minute counts for these animals.
-        </p>
-        <form class="vol-form" id="volForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="volName">Full Name</label>
-              <input type="text" id="volName" placeholder="Your name" autocomplete="name" />
-              <span class="form-error" id="nameError"></span>
-            </div>
-            <div class="form-group">
-              <label for="volEmail">Email</label>
-              <input type="email" id="volEmail" placeholder="you@email.com" autocomplete="email" />
-              <span class="form-error" id="emailError"></span>
-            </div>
+      <div class="volunteer-form reveal-delay">
+        <form id="volunteerForm">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" required placeholder="John Doe">
           </div>
           <div class="form-group">
-            <label for="volInterest">I'd Like To Help With</label>
-            <select id="volInterest">
-              <option value="">Choose an area…</option>
-              <option>Dog Walking & Exercise</option>
-              <option>Foster Care</option>
-              <option>Shelter Maintenance</option>
-              <option>Social Media & Outreach</option>
-              <option>Fundraising Events</option>
-              <option>Veterinary Support</option>
+            <label>Email</label>
+            <input type="email" name="email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone" required placeholder="+1 234 567 8900">
+          </div>
+          <div class="form-group">
+            <label>Availability</label>
+            <select name="availability" required>
+              <option value="">Select availability</option>
+              <option value="weekdays">Weekdays</option>
+              <option value="weekends">Weekends</option>
+              <option value="flexible">Flexible</option>
             </select>
-            <span class="form-error" id="interestError"></span>
           </div>
           <div class="form-group">
-            <label for="volMsg">Tell Us About Yourself</label>
-            <textarea id="volMsg" rows="4" placeholder="A little about yourself and why you'd like to volunteer…"></textarea>
-            <span class="form-error" id="msgError"></span>
+            <label>Message</label>
+            <textarea name="message" rows="4" placeholder="Tell us about yourself..."></textarea>
           </div>
-          <button type="submit" class="btn btn-primary form-submit">Send My Application</button>
-          <div class="form-success" id="formSuccess">
-            🎉 Thank you! We'll be in touch within 2 business days.
-          </div>
+          <button type="submit" class="primary-btn full-width">Join as Volunteer</button>
         </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact-section" id="contact">
-    <div class="section-container">
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <span class="section-tag">Get In Touch</span>
-          <h2 class="contact-title">We'd Love to Hear From You</h2>
-          <p class="contact-tagline">Questions about adoption? Want to donate? Just want to say hello? We're here.</p>
-
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>
-                <strong>Our Shelter</strong>
-                <span>42 Greenway Avenue, Sector 17, Chandigarh — 160017</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📞</div>
-              <div>
-                <strong>Call Us</strong>
-                <a href="tel:+911722345678">+91 172 234 5678</a>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">✉️</div>
-              <div>
-                <strong>Email</strong>
-                <a href="mailto:hello@pawshome.org">hello@pawshome.org</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="social-row">
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="faq-col reveal">
-          <h3 class="faq-title">Frequently Asked Questions</h3>
-          <div class="faq-list" id="faqList">
-
-            <div class="faq-item">
-              <button class="faq-q">
-                What's the adoption process like?
-                <span class="faq-arrow">+</span>
-              </button>
-              <div class="faq-a">
-                <p>It's simple. Browse our pets, fill out a short adoption form, meet your chosen pet at the shelter, and if it's a match — take them home! The whole process usually takes 2–5 days.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q">
-                Are the animals vaccinated and neutered?
-                <span class="faq-arrow">+</span>
-              </button>
-              <div class="faq-a">
-                <p>Yes. All animals at PawsHome are fully vaccinated, dewormed, microchipped, and spayed/neutered before adoption. We also provide a full medical history record.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q">
-                Is there an adoption fee?
-                <span class="faq-arrow">+</span>
-              </button>
-              <div class="faq-a">
-                <p>We charge a nominal fee of ₹500–₹1500 depending on the animal, which covers their shelter stay, vaccinations, and microchipping. We believe good homes shouldn't be kept away by cost.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q">
-                Can I foster instead of adopting?
-                <span class="faq-arrow">+</span>
-              </button>
-              <div class="faq-a">
-                <p>Absolutely! Fostering is a wonderful option. You provide a temporary home while we work to find a permanent match. All food and vet costs are covered by us.</p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-q">
-                What if the adoption doesn't work out?
-                <span class="faq-arrow">+</span>
-              </button>
-              <div class="faq-a">
-                <p>We ask that you contact us first. We offer support, counselling, and a 30-day return policy. Our goal is the best outcome for both the animal and your family.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">Contact</span>
+      <h2>Get in Touch</h2>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="logo-paw">🐾</span>
-          <span>PawsHome</span>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <h4>Visit Us</h4>
+            <p>123 Pet Street, Animal City, AC 12345</p>
+          </div>
         </div>
-        <p class="footer-copy">© 2025 PawsHome Animal Welfare Trust. All rights reserved.</p>
-        <p class="footer-love">Made with love for animals 🐕🐈🐇</p>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <h4>Call Us</h4>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <h4>Email Us</h4>
+            <p>hello@ pawshome.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">🕐</span>
+          <div>
+            <h4>Hours</h4>
+            <p>Mon - Sat: 9AM - 6PM</p>
+          </div>
+        </div>
       </div>
-    </footer>
-  </section>
 
-  <!-- ADOPT MODAL -->
-  <div class="modal-overlay" id="adoptModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeAdoptModal()">×</button>
-      <h3 class="modal-title">Adopt <span id="modalPetName"></span></h3>
-      <p class="modal-desc">Fill in your details and we'll set up a meeting at the shelter.</p>
-      <form class="modal-form" id="adoptForm" novalidate>
-        <input type="text" placeholder="Your Full Name" id="adoptName" />
-        <input type="email" placeholder="Your Email" id="adoptEmail" />
-        <input type="tel" placeholder="Phone Number" id="adoptPhone" />
-        <button type="submit" class="btn btn-primary" style="width:100%">Submit Request</button>
-        <div class="form-success" id="adoptSuccess" style="display:none">
-          🐾 Request sent! We'll contact you within 24 hours.
-        </div>
-      </form>
+      <div class="contact-form reveal-delay">
+        <form id="contactForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" name="subject" required placeholder="How can we help?">
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="5" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="primary-btn full-width">Send Message</button>
+        </form>
+      </div>
     </div>
   </div>
+</section>
 
-  <script src="script.js"></script>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">🐾 PawsHome</div>
+        <p>Connecting loving pets with loving humans since 2020.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#adopt">Adopt Pets</a>
+        <a href="#stories">Success Stories</a>
+        <a href="#volunteer">Volunteer</a>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <a href="#">Adoption Guide</a>
+        <a href="#">Pet Care Tips</a>
+        <a href="#">FAQ</a>
+        <a href="#">Support Us</a>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 PawsHome. All rights reserved. Made with ❤️ for animals.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/form-validation.js"></script>
+
 </body>
 </html>
