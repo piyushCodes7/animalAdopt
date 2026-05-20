@@ -9,30 +9,35 @@ if (volunteerForm) {
     const email = this.querySelector('input[name="email"]').value.trim();
     const phone = this.querySelector('input[name="phone"]').value.trim();
     const availability = this.querySelector('select[name="availability"]').value;
+    const message = this.querySelector('textarea[name="message"]').value.trim();
     
     // Basic validation
     if (name.length < 2) {
-      alert('Please enter a valid name');
+      showToast('Please enter a valid name', 'error');
       return;
     }
     
     if (!isValidEmail(email)) {
-      alert('Please enter a valid email address');
+      showToast('Please enter a valid email address', 'error');
       return;
     }
     
     if (!isValidPhone(phone)) {
-      alert('Please enter a valid phone number');
+      showToast('Please enter a valid phone number (at least 10 digits)', 'error');
       return;
     }
     
     if (!availability) {
-      alert('Please select your availability');
+      showToast('Please select your availability', 'error');
       return;
     }
     
-    // Success
-    alert('Thank you for your interest in volunteering! We will contact you soon.');
+    // Success: Save to local storage
+    if (typeof saveVolunteerSubmission === 'function') {
+      saveVolunteerSubmission(name, email, phone, availability, message);
+    } else {
+      showToast('Thank you for your interest in volunteering! We will contact you soon.', 'success');
+    }
     this.reset();
   });
 }
@@ -50,27 +55,31 @@ if (contactForm) {
     
     // Basic validation
     if (name.length < 2) {
-      alert('Please enter a valid name');
+      showToast('Please enter a valid name', 'error');
       return;
     }
     
     if (!isValidEmail(email)) {
-      alert('Please enter a valid email address');
+      showToast('Please enter a valid email address', 'error');
       return;
     }
     
     if (subject.length < 3) {
-      alert('Please enter a subject with at least 3 characters');
+      showToast('Please enter a subject with at least 3 characters', 'error');
       return;
     }
     
     if (message.length < 10) {
-      alert('Please enter a message with at least 10 characters');
+      showToast('Please enter a message with at least 10 characters', 'error');
       return;
     }
     
-    // Success
-    alert('Thank you for your message! We will get back to you soon.');
+    // Success: Save to local storage
+    if (typeof saveContactSubmission === 'function') {
+      saveContactSubmission(name, email, subject, message);
+    } else {
+      showToast('Thank you for your message! We will get back to you soon.', 'success');
+    }
     this.reset();
   });
 }
@@ -79,8 +88,16 @@ if (contactForm) {
 const adoptButtons = document.querySelectorAll('.adopt-btn');
 adoptButtons.forEach(button => {
   button.addEventListener('click', function() {
-    const petName = this.closest('.pet-content').querySelector('h3').textContent;
-    alert(`Thank you for your interest in adopting ${petName}! Please fill out the contact form and we'll be in touch.`);
+    const petCard = this.closest('.pet-card');
+    const petName = petCard.querySelector('.pet-content h3').textContent.trim();
+    const petType = petCard.dataset.type || 'unknown pet';
+    
+    // Success: Open adoption modal form
+    if (typeof openAdoptionModal === 'function') {
+      openAdoptionModal(petName, petType);
+    } else {
+      showToast(`Thank you for your interest in adopting ${petName}! Please fill out the contact form and we'll be in touch.`, 'success');
+    }
   });
 });
 
